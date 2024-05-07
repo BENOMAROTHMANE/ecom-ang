@@ -1,0 +1,5 @@
+.custom-dark-button {
+    background-color: #343a40; /* Replace with your desired dark color */
+    color: white; /* Set text color to contrast with the dark background */
+    margin-right: 10px; /* Adjust the value to specify the desired space between buttons */
+  }

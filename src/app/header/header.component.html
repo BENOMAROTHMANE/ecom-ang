@@ -1,0 +1,25 @@
+<mat-toolbar >
+  <span>
+     BEN - STORE
+  </span>
+
+  <span class="space-buttons"></span>
+  <button *ngIf="!isLoggedIn()" routerLink="/login" mat-raised-button color="dark" class="custom-dark-button">
+    Login
+  </button>
+  
+  <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="black">
+    Logout
+  </button>
+</mat-toolbar>
+
+<mat-toolbar  *ngIf="isLoggedIn()">
+  <button mat-raised-button routerLink="/"class="custom-dark-button">Acceuil</button>
+  <button *ngIf="!isAdmin()" mat-raised-button routerLink="/cart"class="custom-dark-button">Carte</button>
+  <button *ngIf="!isAdmin()" mat-raised-button routerLink="/myOrders"class="custom-dark-button">Mes commandes</button>
+  <button *ngIf="isAdmin()" mat-raised-button routerLink="/addNewProduct"class="custom-dark-button">Ajouter un nouveu produit</button>
+  <button *ngIf="isAdmin()" mat-raised-button routerLink="/showProductDetails"class="custom-dark-button">Voir les details du produit</button>
+  <button *ngIf="isAdmin()" mat-raised-button routerLink="/orderInformation"class="custom-dark-button">information de la commande</button>
+  <button *ngIf="isAdmin()" mat-raised-button routerLink="/mail"class="custom-dark-button">envoyer email</button>
+
+</mat-toolbar>
